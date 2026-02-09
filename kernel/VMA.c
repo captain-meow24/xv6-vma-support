@@ -1,6 +1,12 @@
 //
 // Created by kanishka on 5/2/26.
 //
+
+#include "VMA.h"
+#include "kernel/defs.h"
+
+struct vma* root = 0;
+
 struct vma* find_vma(struct vma* vm, uint64 addr){
     struct vma* temp = vm;
     while(temp){
@@ -11,3 +17,12 @@ struct vma* find_vma(struct vma* vm, uint64 addr){
     }
     return 0;
 }
+struct vma* create_node(){
+    struct vma* temp = (struct vma*) kalloc();
+    if(temp ==0){
+        return 0;
+    }
+    temp->next = 0;
+    return temp;
+}
+
