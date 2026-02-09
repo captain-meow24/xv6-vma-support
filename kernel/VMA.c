@@ -5,7 +5,7 @@
 #include "VMA.h"
 #include "kernel/defs.h"
 
-struct vma* root = 0;
+
 
 struct vma* find_vma(struct vma* vm, uint64 addr){
     struct vma* temp = vm;
