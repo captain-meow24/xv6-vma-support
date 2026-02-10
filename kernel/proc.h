@@ -1,4 +1,6 @@
 // Saved registers for kernel context switches.
+#include "VMA.h"
+
 struct context {
   uint64 ra;
   uint64 sp;
@@ -104,5 +106,5 @@ struct proc {
   struct file *ofile[NOFILE];  // Open files
   struct inode *cwd;           // Current directory
   char name[16];               // Process name (debugging)
-  struct vma* root_vma = 0;        // root of vma linked list
+  struct vma* root_vma;        // root of vma linked list
 };
