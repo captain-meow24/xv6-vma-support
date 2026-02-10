@@ -1,11 +1,10 @@
 //
 // Created by kanishka on 5/2/26.
 //
-
+#include "types.h"
+#include "riscv.h"
+#include "defs.h"
 #include "VMA.h"
-#include "kernel/defs.h"
-
-
 
 struct vma* find_vma(struct vma* vm, uint64 addr){
     struct vma* temp = vm;
