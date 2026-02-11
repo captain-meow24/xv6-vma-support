@@ -21,4 +21,5 @@ struct vma {
 
 struct vma* find_vma(struct vma* vm, uint64 addr);
 struct vma* create_node();
+struct vma* init_vma(struct vma* node, uint64 start, uint64 end, int prot);
 #endif //VMA_H
